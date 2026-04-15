@@ -1,5 +1,6 @@
 package com.herani.ussd_demo.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -10,9 +11,11 @@ import java.util.Map;
 
 @Service
 public class AuthService {
+    @Value("${auth.api.url}")
+    private String url;
     public boolean authenticateUser(String pin) {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "https://qaapicbesuperapp.eaglelionsystems.com/api/v1/cbesuperapp/member_auth/login";
+//        String url = "https://qaapicbesuperapp.eaglelionsystems.com/api/v1/cbesuperapp/member_auth/login";
         HttpHeaders headers = new HttpHeaders();
         headers.set("device_uuid", "924224a1ae5b3efc");
         headers.set("platform", "android");
@@ -25,7 +28,5 @@ public class AuthService {
         HttpEntity<Map<String, String>> request = new HttpEntity<>(body, headers);
         ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
         return response.getStatusCode().is2xxSuccessful();
-        // Add any required headers here
-        // headers.set("Authorization", "Bearer " + token);
     }
 }
