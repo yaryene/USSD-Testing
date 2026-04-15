@@ -257,5 +257,3 @@ You now have:
 ✅ Interactive simulator testing
 
 ---
-
-You can now extend this into a **production-grade USSD system** 🚀
