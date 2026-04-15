@@ -58,26 +58,4 @@ public class UssdController {
         }
         return "END Error";
     }
-//369258
-//    0932948548
-    // call your real api
-    // RestTemplate (simple for now)
-//    private boolean authenticateUser(String pin) {
-//        RestTemplate restTemplate = new RestTemplate();
-//        String url = "https://qaapicbesuperapp.eaglelionsystems.com/api/v1/cbesuperapp/member_auth/login";
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.set("device_uuid", "924224a1ae5b3efc");
-//        headers.set("platform", "android");
-//        headers.set("installation_date", "2026-03-04T12:38:01.627Z");
-//        headers.set("x-source", "app");
-//        headers.set("app_version", "1.0");
-//
-//        Map<String, String> body = Map.of("pin", pin);
-//
-//        HttpEntity<Map<String, String>> request = new HttpEntity<>(body, headers);
-//        ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
-//        return response.getStatusCode().is2xxSuccessful();
-//        // Add any required headers here
-//        // headers.set("Authorization", "Bearer " + token);
-//    }
 }
