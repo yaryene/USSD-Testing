@@ -1,0 +1,84 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Shabelle Bank USSD Simulator</title>-->
+<!--  <script src="https://cdn.tailwindcss.com"></script>-->
+<!--  <link rel="stylesheet" href="style.css">-->
+<!--</head>-->
+<!--<body class="bg-zinc-950 flex items-center justify-center min-h-screen font-mono">-->
+<!--<div class="phone">-->
+<!--  <div id="display" class="screen">-->
+<!--    Dial *123# to start-->
+<!--  </div>-->
+
+<!--  <div class="controls">-->
+<!--    <input id="inputField" type="text" placeholder="*123#"-->
+<!--           class="input-box" autocomplete="off">-->
+
+<!--    <div class="buttons">-->
+<!--      <button onclick="dial()" class="dial-btn">DIAL / SEND</button>-->
+<!--      <button onclick="clearInput()" class="clear-btn">CLEAR</button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<script src="script.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shabelle Bank USSD Simulator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-950 flex items-center justify-center min-h-screen font-mono">
+<div class="phone">
+  <!-- Screen -->
+  <div id="display" class="screen">
+    Welcome to Shabelle Bank Simulator<br><br>
+    Press DIAL to start (*123#)
+  </div>
+
+  <!-- Input Box -->
+  <div class="controls">
+    <input id="inputField" type="text" placeholder="Enter PIN or option"
+           class="input-box" autocomplete="off" autofocus>
+  </div>
+
+  <!-- Numeric Keypad -->
+  <div class="keypad">
+    <div class="grid grid-cols-3 gap-3">
+      <button onclick="appendToInput('1')" class="key">1</button>
+      <button onclick="appendToInput('2')" class="key">2</button>
+      <button onclick="appendToInput('3')" class="key">3</button>
+
+      <button onclick="appendToInput('4')" class="key">4</button>
+      <button onclick="appendToInput('5')" class="key">5</button>
+      <button onclick="appendToInput('6')" class="key">6</button>
+
+      <button onclick="appendToInput('7')" class="key">7</button>
+      <button onclick="appendToInput('8')" class="key">8</button>
+      <button onclick="appendToInput('9')" class="key">9</button>
+
+      <button onclick="appendToInput('*')" class="key">*</button>
+      <button onclick="appendToInput('0')" class="key">0</button>
+      <button onclick="appendToInput('#')" class="key">#</button>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="action-buttons">
+    <button onclick="dial()" class="dial-btn">DIAL / SEND</button>
+    <button onclick="clearInput()" class="clear-btn">CLEAR</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
