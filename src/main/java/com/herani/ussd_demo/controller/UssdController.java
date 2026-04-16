@@ -30,7 +30,7 @@ public class UssdController {
 
         // Step 1: First request - Welcome & ask PIN
         if (userText.isEmpty()) {
-            return "CON Welcome to Shabelle Bank IBMB.\nPlease enter your 4-digit PIN:";
+            return "CON Welcome to SB Bank IBMB.\nPlease enter your 4-digit PIN:";
         }
 
         String[] inputs = userText.split("\\*");
@@ -65,7 +65,7 @@ public class UssdController {
                     String subChoice = inputs[2].trim();
                     if ("1".equals(subChoice)) {
                         return "END Account: 1000123456789\n" +
-                                "Name: Ermias Tefera\n" +
+                                "Name: Abebe Kebede\n" +
                                 "Balance: ETB 24,850.75\n" +
                                 "Available: ETB 24,850.75";
                     }

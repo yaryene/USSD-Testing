@@ -1,4 +1,4 @@
-# Shabelle Bank USSD Simulator (Local Version)
+# SB Bank USSD Simulator (Local Version)
 
 This branch contains a **fully local** USSD testing environment with a browser-based phone emulator.
 
