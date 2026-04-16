@@ -29,7 +29,7 @@ public class UssdController {
 
         // step 1: First Dial
         if(text.isEmpty()){
-            return "CON Welcome to Shabelle Bank IBMB.\nPlease enter your PIN:";
+            return "CON Welcome to SB Bank IBMB.\nPlease enter your PIN:";
         }
 
         //  step 2: PIN Entry
